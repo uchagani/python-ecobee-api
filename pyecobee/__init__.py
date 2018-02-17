@@ -234,7 +234,7 @@ class Ecobee(object):
                     "fan": fan_mode
                 }}]}
         log_msg_action = "set fan mode"
-        return self.make_request(body, log_msg_action)
+        return self.make_request(json.dumps(body), log_msg_action)
 
     def set_hold_temp(self, index, cool_temp, heat_temp,
                       hold_type="nextTransition"):
